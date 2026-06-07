@@ -1,7 +1,5 @@
 let current = 0;
 let score = 0;
-let time = 30;
-let timer;
 let wrong = [];
 
 questions.sort(() => Math.random() - 0.5);
@@ -10,38 +8,7 @@ const questionEl = document.getElementById("question");
 const answersEl = document.getElementById("answers");
 const scoreEl = document.getElementById("score");
 const nextBtn = document.getElementById("next");
-const timerEl = document.getElementById("timer");
 const progressBar = document.getElementById("bar");
-
-function startTimer() {
-
-    clearInterval(timer);
-
-    time = 30;
-    timerEl.textContent = time;
-
-    timer = setInterval(() => {
-
-        time--;
-
-        timerEl.textContent = time;
-
-        if (time <= 0) {
-
-            clearInterval(timer);
-
-            wrong.push({
-                question: questions[current].question,
-                correct: questions[current].answers[
-                    questions[current].correct
-                ]
-            });
-
-            nextQuestion();
-        }
-
-    }, 1000);
-}
 
 function showQuestion() {
 
@@ -69,9 +36,6 @@ function showQuestion() {
         btn.classList.add("answer-btn");
 
         btn.onclick = () => {
-
-            clearInterval(timer);
-
             const buttons =
                 [...answersEl.children];
 
@@ -111,8 +75,6 @@ function showQuestion() {
 
         answersEl.appendChild(btn);
     });
-
-    startTimer();
 }
 
 function nextQuestion() {
@@ -127,9 +89,6 @@ function nextQuestion() {
 nextBtn.addEventListener("click", nextQuestion);
 
 function finishQuiz() {
-
-    clearInterval(timer);
-
     const percent =
         ((score / questions.length) * 100).toFixed(1);
 
