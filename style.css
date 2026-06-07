@@ -1,0 +1,19 @@
+body{font-family:Segoe UI,sans-serif;background:#0f172a;color:white;display:flex;justify-content:center;padding:30px}
+.container{max-width:900px;width:100%;background:#1e293b;padding:25px;border-radius:20px}
+button{width:100%;padding:12px;margin:6px 0;border:none;border-radius:10px;cursor:pointer}
+#next{display:none;background:#3b82f6;color:white}
+.correct {
+    background: #22c55e !important;
+}
+
+.wrong {
+    background: #ef4444 !important;
+}
+
+.answer-btn {
+    background: #334155;
+    color: white;
+}
+.progress{height:12px;background:#334155;border-radius:20px;overflow:hidden}
+#bar{height:100%;width:0;background:#22c55e}
+.topbar{display:flex;justify-content:space-between;margin:10px 0}
