@@ -165,7 +165,7 @@ correct:0
 {
 question:"Below is a valid declaration of a dynamic stack implemented as a list:\nstack<int, list<int>> iStack;",
 answers:["True","False"],
-correct:0
+correct:1
 },
 
 {
@@ -187,7 +187,7 @@ answers:[
 "Grow in size as needed",
 "Shrink in size as needed"
 ],
-correct:0
+correct:3
 },
 
 {
@@ -199,7 +199,7 @@ correct:0
 {
 question:"Below is a valid declaration of a dynamic stack implemented as a vector: stack<int> iStack",
 answers:["True","False"],
-correct:0
+correct:1
 },
 
 {
@@ -291,7 +291,7 @@ answers:[
 "When nodePtr->next is NULL",
 "When the first element is printed"
 ],
-correct:1
+correct:2
 },
 
 {
@@ -390,7 +390,7 @@ answers:[
 "20 10 30",
 "30 20 10"
 ],
-correct:1
+correct:3
 },
 
 {
